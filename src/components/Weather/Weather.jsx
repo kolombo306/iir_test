@@ -41,7 +41,7 @@ function Weather() {
         setIsLoading(false);
         setWeatherData({
           Город: data.name,
-          'Температура, °С:': data.main.temp,
+          'Температура, °С': data.main.temp,
           'Влажность, %': data.main.humidity,
           'Ощущается как, °С': data.main.feels_like,
           Облачность: data.weather[0].description,
@@ -92,7 +92,7 @@ function Weather() {
             <ul className="list-group list-group-flush">
               {Object.entries(weatherData).map((el) => (
                 <li key={el[0] + el[1]} className="list-group-item">
-                  {`${el[0]} : ${el[1]}`}
+                  {`${el[0]}: ${el[1]}`}
                 </li>
               ))}
             </ul>
