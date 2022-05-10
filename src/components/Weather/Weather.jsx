@@ -24,7 +24,7 @@ function Weather() {
     e.preventDefault();
     setIsLoading(true);
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=1&lang=ru&units=metric&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city.trim()}&limit=1&lang=ru&units=metric&appid=${apiKey}`
     )
       .then((res) => {
         if (res.ok) {
